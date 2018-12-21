@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BSF</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+ 
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <link href="logo.png" rel="icon" type="icon/png">
+   
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEE48I8GWtsi2G7jWnO2G4PwSXm9avnK8",
+    authDomain: "test1-2273d.firebaseapp.com",
+    databaseURL: "https://test1-2273d.firebaseio.com",
+    projectId: "test1-2273d",
+    storageBucket: "test1-2273d.appspot.com",
+    messagingSenderId: "10157417003"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.1/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'home.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+             
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
+          
+        ],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback
+        // function.
+        // Terms of service url/callback.
+       
+        }
+      ;
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+  </head>
+  <body>
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+         Your app may use that space for branding, controls and other customizations.-->
+         <section class="hero is-black">
+
+           <br><br><br><br><br><br><br>
+    <h1 style="text-align: center; font-size: 36px; font-weight: bold; color: hsl(171,100%,41%);">Log In | BSF</h1>
+    <div id="firebaseui-auth-container"></div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br></section>
+  </body>
+</html>
