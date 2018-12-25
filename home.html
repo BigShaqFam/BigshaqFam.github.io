@@ -18,7 +18,21 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  
+    
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAEE48I8GWtsi2G7jWnO2G4PwSXm9avnK8",
+    authDomain: "test1-2273d.firebaseapp.com",
+    databaseURL: "https://test1-2273d.firebaseio.com",
+    projectId: "test1-2273d",
+    storageBucket: "test1-2273d.appspot.com",
+    messagingSenderId: "10157417003"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </head>
 
 
@@ -59,6 +73,15 @@
                   <i class="fas fa-music"></i>
                 </span>
                 <span>Music </span>
+              </a></span>
+
+
+            <span class="navbar-item">
+            <a  href="#">
+                <span class="icon">
+                  <i class="fas fa-user"></i>
+                </span>
+                <span>'+ user.displayName +' </span>
               </a></span>
 
 
