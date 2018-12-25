@@ -61,7 +61,13 @@
              <span class="navbar-item">
 
 
-          
+            <span class="navbar-item">
+            <a  href=#>
+                <span class="icon">
+                  <i class="fas fa-user"></i>
+                </span>
+                <span><p id="p01">Useless</p></span>
+              </a></span>
 
             
                 <span class="icon">
@@ -290,7 +296,19 @@ With help of 2 founding members we hope to take this to the next level</p>
    
        
     
+ <script>
+       
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+       var displayName =   document.getElementById("p01");
+displayName.innerHTML = '+ displayName +';}
+
+else {
+  console.log("no longer signed in");
+}
  
+            </script>
 
 
  
