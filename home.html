@@ -17,6 +17,10 @@
   <link href="logo.png" rel="icon" type="icon/png">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animate.css">
+   <link rel="stylesheet" href="./css/uikit.min.css" />
+        <script src="./js/uikit.min.js"></script>
+        <script src="./js/uikit-icons.min.js"></script>
 
     
 <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
@@ -48,14 +52,14 @@
             <img src="logo.png" alt="Logo">
           </a>
 
-          <span class="navbar-burger burger" data-target="navbarMenuHeroB" style="color: hsl(171,100%,41%); ">
+          <span class="navbar-burger burger" data-target="navbarMenuHeroB"  style="color: hsl(171,100%,41%); ">
             <span></span>
             <span></span>
             <span></span>
           </span>
         </div>
         
-        <div id="navbarMenuHeroB" class="navbar-menu" style="background: hsl(0,0%,4%);">
+        <div id="navbarMenuHeroB" class="navbar-menu  animated slideInDown" style="background: hsl(0,0%,4%);">
           <div class="navbar-end">
 
              <span class="navbar-item">
@@ -127,14 +131,14 @@
       <b>BSF's Official Website! </h2> <br></b>
 
 
-        <a class="button is-danger is-focused is-large  is-outlined" href="svp.html"><span class="icon"> <i class="fas fa-bolt"></i>
+        <a class="button is-danger is-focused is-large  has-text-warning" href="#modal-center" uk-toggle><span class="icon"> <i class="fas fa-bolt"></i>
                 </span>
                 <span>Zoroko V/s Goku</span>
               </a></span>
 <br><br>
-                  <a class="button is-danger is-focused is-medium " href="#"><span class="icon"> <i class="fas fa-clock"></i>
+                  <a class="button is-primary is-outlined is-focused is-medium "><span class="icon"> <i class="fas fa-clock"></i>
                 </span> 
-                <span><p id="demo"></p></span>
+                <p id="demo" style="text-align: center;"></p>
               </a></span>
 
       
@@ -147,7 +151,23 @@
   
 </section>
 
- 
+
+<div id="modal-center" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <h2 class="uk-modal-title" style="color: hsl(348, 100%, 61%);">Zoroko V/s Goku</h2>
+
+        <p>The battle between the TWO Titans! is here after a heated argument last night, it's time both finally step-up in 1v1 Battle in Fortnite.
+        with Shrey(Zoroko) finally having a good laptop,and no excuses.So Friends it's the perfect time for the battle.... <br> <br>
+<b style="color:hsl(204, 86%, 53%); ">
+        The 1<sup>st</sup> choice location is Tilted Towers but if playgrounds is not fixed yet... creative would be the choice (Custom Map)<br><br>
+
+        The agreed till now is 20:30/10:30 I.S.T (26<sup>th</sup> Dec. 2018)</b></p>
+
+    </div>
+</div>
 
  
   <section style="padding-bottom: 30px;" class="hero is-black " id="about">
@@ -280,21 +300,7 @@ With help of 2 founding members we hope to take this to the next level</p>
    
        
     
- <script>
-       
-        firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-            // User is signed in.
-       var displayName =   document.getElementById("p01");
-displayName.innerHTML = '+ displayName +';}
-
-else {
-  console.log("no longer signed in");
-}
- 
-            </script>
-
-
+ <script></script>
  
 
 
